@@ -1,0 +1,23 @@
+:root {
+  --color-bg: #fbfaf7;
+  --color-text: #1d1d1b;
+  --color-muted: #6b6b66;
+  --color-border: #e5e3dd;
+  --color-accent: #0f766e;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.content {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.placeholder {
+  max-width: 60ch;
+}
