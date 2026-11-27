@@ -1,0 +1,23 @@
+<a class="back" routerLink="/destinations">← Back to destinations</a>
+
+@if (destination(); as destination) {
+  <article class="detail">
+    <img [src]="destination.imageUrl" [alt]="destination.name" />
+
+    <div class="info">
+      <p class="meta">{{ destination.country }} · {{ destination.region }}</p>
+      <h1>{{ destination.name }}</h1>
+      <p class="description">{{ destination.description }}</p>
+
+      <ul class="tags">
+        @for (category of destination.categories; track category) {
+          <li>{{ category }}</li>
+        }
+      </ul>
+
+      <p class="rating">★ {{ destination.rating }}</p>
+    </div>
+  </article>
+} @else {
+  <p>Destination not found.</p>
+}

@@ -3,7 +3,9 @@
 
   <div class="body">
     <p class="meta">{{ destination().country }} · {{ destination().region }}</p>
-    <h2>{{ destination().name }}</h2>
+    <h2>
+      <a [routerLink]="['/destinations', destination().id]">{{ destination().name }}</a>
+    </h2>
     <p class="description">{{ destination().description }}</p>
 
     <ul class="tags">
