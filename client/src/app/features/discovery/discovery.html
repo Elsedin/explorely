@@ -1,4 +1,13 @@
-<section class="placeholder">
+<section>
   <h1>Destinations</h1>
-  <p>Destination list will appear here. (Placeholder, M0)</p>
+
+  @if (destinations().length === 0) {
+    <p>No destinations found.</p>
+  } @else {
+    <div class="grid">
+      @for (destination of destinations(); track destination.id) {
+        <app-destination-card [destination]="destination" />
+      }
+    </div>
+  }
 </section>

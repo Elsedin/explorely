@@ -1,0 +1,17 @@
+<article class="card">
+  <img [src]="destination().imageUrl" [alt]="destination().name" loading="lazy" />
+
+  <div class="body">
+    <p class="meta">{{ destination().country }} · {{ destination().region }}</p>
+    <h2>{{ destination().name }}</h2>
+    <p class="description">{{ destination().description }}</p>
+
+    <ul class="tags">
+      @for (category of destination().categories; track category) {
+        <li>{{ category }}</li>
+      }
+    </ul>
+
+    <p class="rating">★ {{ destination().rating }}</p>
+  </div>
+</article>
